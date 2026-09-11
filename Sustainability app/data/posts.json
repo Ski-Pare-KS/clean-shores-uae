@@ -1,0 +1,89 @@
+{
+  "en": [
+    {
+      "id": "seed-en-1",
+      "author": "Sara",
+      "type": "Cleanup recommendation",
+      "location": "Jumeirah Beach, Dubai",
+      "message": "This area would benefit from a morning cleanup event on the weekend. It is popular, so the impact would be visible immediately.",
+      "media": "",
+      "createdAt": "2026-04-04T09:00:00.000Z"
+    },
+    {
+      "id": "seed-en-2",
+      "author": "Omar",
+      "type": "Thought",
+      "location": "Abu Dhabi Corniche",
+      "message": "I would love to see more schools and families joining beach cleanups. Regular events can really change habits over time.",
+      "media": "",
+      "createdAt": "2026-04-04T10:00:00.000Z"
+    },
+    {
+      "id": "seed-en-3",
+      "author": "Lina",
+      "type": "Photo report",
+      "location": "Al Heera Beach, Sharjah",
+      "message": "After a local cleanup, the shoreline looked much better. More waste collection points would make the result last longer.",
+      "media": "https://example.com",
+      "createdAt": "2026-04-04T11:00:00.000Z"
+    }
+  ],
+  "ru": [
+    {
+      "id": "seed-ru-1",
+      "author": "Sara",
+      "type": "Рекомендация места",
+      "location": "Jumeirah Beach, Dubai",
+      "message": "На этом участке стоит провести утреннюю уборку в выходной день. Пляж популярный, поэтому результат будет заметен сразу.",
+      "media": "",
+      "createdAt": "2026-04-04T09:00:00.000Z"
+    },
+    {
+      "id": "seed-ru-2",
+      "author": "Omar",
+      "type": "Мысль",
+      "location": "Abu Dhabi Corniche",
+      "message": "Хочется, чтобы больше школ и семей присоединялись к уборкам пляжей. Регулярные мероприятия реально меняют привычки.",
+      "media": "",
+      "createdAt": "2026-04-04T10:00:00.000Z"
+    },
+    {
+      "id": "seed-ru-3",
+      "author": "Lina",
+      "type": "Фотоотчёт",
+      "location": "Al Heera Beach, Sharjah",
+      "message": "После локальной уборки берег стал заметно чище. Если добавить больше точек сбора отходов, эффект сохранится дольше.",
+      "media": "https://example.com",
+      "createdAt": "2026-04-04T11:00:00.000Z"
+    }
+  ],
+  "ar": [
+    {
+      "id": "seed-ar-1",
+      "author": "Sara",
+      "type": "اقتراح موقع تنظيف",
+      "location": "Jumeirah Beach, Dubai",
+      "message": "هذه المنطقة مناسبة لفعالية تنظيف صباحية في عطلة نهاية الأسبوع. المكان مشهور، لذلك سيكون الأثر واضحاً بسرعة.",
+      "media": "",
+      "createdAt": "2026-04-04T09:00:00.000Z"
+    },
+    {
+      "id": "seed-ar-2",
+      "author": "Omar",
+      "type": "فكرة",
+      "location": "Abu Dhabi Corniche",
+      "message": "أتمنى أن تنضم مدارس وعائلات أكثر إلى حملات تنظيف الشواطئ. الفعاليات المنتظمة يمكن أن تغيّر العادات فعلاً.",
+      "media": "",
+      "createdAt": "2026-04-04T10:00:00.000Z"
+    },
+    {
+      "id": "seed-ar-3",
+      "author": "Lina",
+      "type": "تقرير صور",
+      "location": "Al Heera Beach, Sharjah",
+      "message": "بعد حملة تنظيف محلية أصبح الشاطئ أفضل بكثير. إضافة نقاط جمع نفايات أكثر ستساعد في استمرار النتيجة.",
+      "media": "https://example.com",
+      "createdAt": "2026-04-04T11:00:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+Sustainability app/node_modules/
+
+# OS & Editor files
+.DS_Store
+*/.DS_Store
+.vscode/
+
+# Vercel deployment cache
+.vercel/
+
+# Uploads directory (preserve folder, ignore dynamic uploads)
+Sustainability app/uploads/*
+!Sustainability app/uploads/.gitkeep
+
+# Raw source media folder (contains original large raw videos >100MB)
+Images/
