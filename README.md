@@ -97,3 +97,4 @@ ECO_project/
     ├── assets/                     # Web-optimized images, audio, and videos (<35MB)
     └── scripts/                    # Media processing scripts
 ```
+
