@@ -716,7 +716,7 @@ const fallbackSeedPosts = {
     },
     {
       id: "seed-en-3",
-      author: "Lina",
+      author: "Konstantin",
       type: "Photo report",
       location: "Al Heera Beach, Sharjah",
       message: "After a local cleanup, the shoreline looked much better. More waste collection points would make the result last longer.",
@@ -745,7 +745,7 @@ const fallbackSeedPosts = {
     },
     {
       id: "seed-ru-3",
-      author: "Lina",
+      author: "Konstantin",
       type: "Фотоотчёт",
       location: "Al Heera Beach, Sharjah",
       message: "После локальной уборки берег стал заметно чище. Если добавить больше точек сбора отходов, эффект сохранится дольше.",
@@ -774,7 +774,7 @@ const fallbackSeedPosts = {
     },
     {
       id: "seed-ar-3",
-      author: "Lina",
+      author: "Konstantin",
       type: "تقرير صور",
       location: "Al Heera Beach, Sharjah",
       message: "بعد حملة تنظيف محلية أصبح الشاطئ أفضل بكثير. إضافة نقاط جمع نفايات أكثر ستساعد في استمرار النتيجة.",
