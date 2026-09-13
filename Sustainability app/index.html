@@ -104,13 +104,13 @@
 
       <section class="media section" id="media">
         <div class="section-heading reveal">
-          <p class="eyebrow" id="mediaEyebrow">Owner Media Block</p>
-          <h2 id="mediaTitle">A dedicated space for your photos and videos from environmental events.</h2>
+          <p class="eyebrow" id="mediaEyebrow">Conservation in Action</p>
+          <h2 id="mediaTitle">Documenting our coastal conservation efforts across the Emirates.</h2>
         </div>
         <div class="media-layout">
           <article class="media-feature media-carousel reveal" aria-roledescription="carousel" aria-label="Environmental media gallery">
             <div class="carousel-track" id="mediaCarousel">
-              <img class="carousel-slide is-active" src="assets/forest.jpg" id="mediaImage" alt="Green natural area">
+              <img class="carousel-slide is-active" src="assets/forest.jpg" id="mediaImage" alt="Green natural coastal area">
               <img class="carousel-slide" src="assets/community.jpg" alt="Community environmental action">
               <img class="carousel-slide" src="assets/20260301_102652.jpg" alt="Environmental community event">
               <img class="carousel-slide" src="assets/20260301_102653.jpg" alt="Environmental community event">
@@ -129,34 +129,27 @@
               <button class="carousel-button" type="button" id="carouselNext" aria-label="Next media">→</button>
             </div>
             <div class="media-feature-copy">
-              <h3 id="mediaFeatureTitle">Main campaign story</h3>
-              <p id="mediaFeatureText">Use this block as a showcase for your strongest photos, videos and reports from beach cleanup actions.</p>
+              <h3 id="mediaFeatureTitle">Active Shoreline Restoration</h3>
+              <p id="mediaFeatureText">Our volunteer teams regularly survey, clean, and protect UAE shorelines, safeguarding sensitive marine ecosystems for future generations.</p>
             </div>
           </article>
 
           <div class="media-stack">
             <article class="glass-card media-note reveal">
-              <h3 id="mediaListTitle">What you can place here</h3>
+              <h3 id="mediaListTitle">Our Key Programs</h3>
               <ul>
-                <li id="mediaList1">before-and-after cleanup photos</li>
-                <li id="mediaList2">videos from beach cleanup days</li>
-                <li id="mediaList3">short interviews with volunteers</li>
-                <li id="mediaList4">posters for upcoming events</li>
+                <li id="mediaList1">Community weekend coastal cleanups</li>
+                <li id="mediaList2">Marine debris auditing & sorting</li>
+                <li id="mediaList3">Youth & school conservation workshops</li>
+                <li id="mediaList4">Pollution hotspot documentation & advocacy</li>
               </ul>
             </article>
 
             <article class="glass-card upload-card reveal">
-              <h3 id="uploadTitle">Media upload area</h3>
-              <p id="uploadText">This is a ready interface for future integration with backend services or cloud storage.</p>
-              <div class="upload-grid">
-                <label class="upload-field">
-                  <span id="uploadPhotoLabel">Upload photo</span>
-                  <input type="file" accept="image/*">
-                </label>
-                <label class="upload-field">
-                  <span id="uploadVideoLabel">Upload video</span>
-                  <input type="file" accept="video/*">
-                </label>
+              <h3 id="uploadTitle">Share Your Action Media</h3>
+              <p id="uploadText">Participated in a recent coastal cleanup? Submit your photos and video clips to be highlighted on our community wall.</p>
+              <div class="upload-action-box">
+                <a href="#community" class="button button-primary" id="uploadCta">Contribute to Community Wall</a>
               </div>
             </article>
           </div>
@@ -165,43 +158,294 @@
 
       <section class="cleanup-spots section" id="cleanup-spots">
         <div class="section-heading reveal">
-          <p class="eyebrow" id="spotsEyebrow">Recommended Spots</p>
-          <h2 id="spotsTitle">Beach areas across the UAE that can be highlighted for future cleanup actions.</h2>
+          <p class="eyebrow" id="spotsEyebrow">Coastal Directory</p>
+          <h2 id="spotsTitle">Priority UAE beach areas highlighted for community cleanup action.</h2>
         </div>
-        <div class="spots-grid">
-          <article class="spot-card reveal">
-            <span class="spot-city">Dubai</span>
-            <h3>Jumeirah Open Beach</h3>
-            <p id="spot1Text">A strong candidate for regular community cleanup sessions and visual progress reports.</p>
+
+        <div class="spots-stats-bar reveal">
+          <div class="spot-stat-item">
+            <span class="spot-stat-num">8+</span>
+            <span class="spot-stat-label" id="spotStatSpots">Monitored Locations</span>
+          </div>
+          <div class="spot-stat-item">
+            <span class="spot-stat-num">6</span>
+            <span class="spot-stat-label" id="spotStatEmirates">Emirates Covered</span>
+          </div>
+          <div class="spot-stat-item">
+            <span class="spot-stat-num">100%</span>
+            <span class="spot-stat-label" id="spotStatVolunteer">Community Driven</span>
+          </div>
+        </div>
+
+        <div class="spots-toolbar reveal">
+          <div class="spots-filter-chips" role="tablist" aria-label="Filter cleanup spots by emirate">
+            <button class="spot-chip is-active" type="button" data-filter="all" id="filterAll">All Emirates</button>
+            <button class="spot-chip" type="button" data-filter="dubai" id="filterDubai">Dubai</button>
+            <button class="spot-chip" type="button" data-filter="abu-dhabi" id="filterAbuDhabi">Abu Dhabi</button>
+            <button class="spot-chip" type="button" data-filter="sharjah" id="filterSharjah">Sharjah</button>
+            <button class="spot-chip" type="button" data-filter="ajman" id="filterAjman">Ajman</button>
+            <button class="spot-chip" type="button" data-filter="northern" id="filterNorthern">Northern Emirates</button>
+          </div>
+          <div class="spots-search-wrap">
+            <input type="search" id="spotsSearchInput" placeholder="Search by beach name, emirate, or keyword..." aria-label="Search cleanup spots">
+          </div>
+        </div>
+
+        <div class="spots-grid" id="spotsGrid">
+          <article class="spot-card reveal" data-emirate="dubai" data-search="jumeirah open beach dubai high priority plastic bottles caps food packaging">
+            <div class="spot-card-top">
+              <span class="spot-city">Dubai</span>
+              <span class="spot-badge badge-priority" id="spot1Badge">High Priority</span>
+            </div>
+            <h3 id="spot1Title">Jumeirah Open Beach</h3>
+            <p id="spot1Text">A high-footfall public stretch where morning volunteer sweeps remove tidal debris and tourist litter before it washes out into Gulf waters.</p>
+            <div class="spot-meta-details">
+              <div class="spot-meta-row">
+                <span class="meta-icon">🗑️</span>
+                <span class="meta-label spot-debris-label">Target Debris:</span>
+                <span class="meta-value" id="spot1Debris">Single-use plastics, bottle caps, food wrappers</span>
+              </div>
+              <div class="spot-meta-row">
+                <span class="meta-icon">🚗</span>
+                <span class="meta-label spot-amenities-label">Facilities:</span>
+                <span class="meta-value" id="spot1Amenities">Public parking, recycling bins, family walking paths</span>
+              </div>
+            </div>
+            <div class="spot-card-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=Jumeirah+Open+Beach+Dubai" target="_blank" rel="noopener noreferrer" class="button-spot-action map-link">
+                <span>📍</span> <span class="spot-directions-text">Get Directions</span>
+              </a>
+              <button type="button" class="button-spot-action nominate-btn" data-spot="Jumeirah Open Beach, Dubai">
+                <span>🤝</span> <span class="spot-nominate-text">Nominate for Cleanup</span>
+              </button>
+            </div>
           </article>
-          <article class="spot-card reveal">
-            <span class="spot-city">Abu Dhabi</span>
-            <h3>Corniche Beach Area</h3>
-            <p id="spot2Text">Suitable for family events, volunteer activities and public environmental education.</p>
+
+          <article class="spot-card reveal" data-emirate="dubai" data-search="kite beach harbor canal dubai active monitoring microplastics straws cups">
+            <div class="spot-card-top">
+              <span class="spot-city">Dubai</span>
+              <span class="spot-badge badge-monitoring" id="spot2Badge">Active Monitoring</span>
+            </div>
+            <h3 id="spot2Title">Kite Beach & Canal Edge</h3>
+            <p id="spot2Text">A lively water-sports hub with extensive shoreline. Ideal for targeted microplastic collection and community education along the dunes.</p>
+            <div class="spot-meta-details">
+              <div class="spot-meta-row">
+                <span class="meta-icon">🗑️</span>
+                <span class="meta-label spot-debris-label">Target Debris:</span>
+                <span class="meta-value" id="spot2Debris">Microplastics, beverage cups, straws, bottle caps</span>
+              </div>
+              <div class="spot-meta-row">
+                <span class="meta-icon">🚗</span>
+                <span class="meta-label spot-amenities-label">Facilities:</span>
+                <span class="meta-value" id="spot2Amenities">Paved promenade, washrooms, shade areas</span>
+              </div>
+            </div>
+            <div class="spot-card-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=Kite+Beach+Dubai" target="_blank" rel="noopener noreferrer" class="button-spot-action map-link">
+                <span>📍</span> <span class="spot-directions-text">Get Directions</span>
+              </a>
+              <button type="button" class="button-spot-action nominate-btn" data-spot="Kite Beach & Canal Edge, Dubai">
+                <span>🤝</span> <span class="spot-nominate-text">Nominate for Cleanup</span>
+              </button>
+            </div>
           </article>
-          <article class="spot-card reveal">
-            <span class="spot-city">Sharjah</span>
-            <h3>Al Heera Beach</h3>
-            <p id="spot3Text">A practical location for local recommendations and youth involvement in cleanup work.</p>
+
+          <article class="spot-card reveal" data-emirate="abu-dhabi" data-search="corniche public beach abu dhabi family friendly wrappers plastic bags">
+            <div class="spot-card-top">
+              <span class="spot-city">Abu Dhabi</span>
+              <span class="spot-badge badge-community" id="spot3Badge">Family Friendly</span>
+            </div>
+            <h3 id="spot3Title">Abu Dhabi Corniche Beach</h3>
+            <p id="spot3Text">An expansive urban shoreline perfect for large school and corporate eco-days, volunteer orientations, and organized debris audits.</p>
+            <div class="spot-meta-details">
+              <div class="spot-meta-row">
+                <span class="meta-icon">🗑️</span>
+                <span class="meta-label spot-debris-label">Target Debris:</span>
+                <span class="meta-value" id="spot3Debris">Snack wrappers, beverage cans, plastic bottles</span>
+              </div>
+              <div class="spot-meta-row">
+                <span class="meta-icon">🚗</span>
+                <span class="meta-label spot-amenities-label">Facilities:</span>
+                <span class="meta-value" id="spot3Amenities">Multiple parking plazas, shaded lawns, accessible pathways</span>
+              </div>
+            </div>
+            <div class="spot-card-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=Corniche+Beach+Abu+Dhabi" target="_blank" rel="noopener noreferrer" class="button-spot-action map-link">
+                <span>📍</span> <span class="spot-directions-text">Get Directions</span>
+              </a>
+              <button type="button" class="button-spot-action nominate-btn" data-spot="Corniche Beach, Abu Dhabi">
+                <span>🤝</span> <span class="spot-nominate-text">Nominate for Cleanup</span>
+              </button>
+            </div>
           </article>
-          <article class="spot-card reveal">
-            <span class="spot-city">Ajman</span>
-            <h3>Ajman Beachfront</h3>
-            <p id="spot4Text">Useful for documenting problem zones and tracking improvement after each cleanup effort.</p>
+
+          <article class="spot-card reveal" data-emirate="abu-dhabi" data-search="saadiyat marine turtle reserve abu dhabi protected reserve ghost nets ropes microplastics">
+            <div class="spot-card-top">
+              <span class="spot-city">Abu Dhabi</span>
+              <span class="spot-badge badge-reserve" id="spot4Badge">Protected Reserve</span>
+            </div>
+            <h3 id="spot4Title">Saadiyat Marine & Coastal Reserve</h3>
+            <p id="spot4Text">A critical nesting ground for endangered Hawksbill turtles. Cleanups focus on clearing discarded marine ropes and tangled plastic flotsam.</p>
+            <div class="spot-meta-details">
+              <div class="spot-meta-row">
+                <span class="meta-icon">🗑️</span>
+                <span class="meta-label spot-debris-label">Target Debris:</span>
+                <span class="meta-value" id="spot4Debris">Abandoned fishing lines, ropes, floating plastics</span>
+              </div>
+              <div class="spot-meta-row">
+                <span class="meta-icon">🚗</span>
+                <span class="meta-label spot-amenities-label">Facilities:</span>
+                <span class="meta-value" id="spot4Amenities">Designated eco-boardwalks, restricted dunes</span>
+              </div>
+            </div>
+            <div class="spot-card-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=Saadiyat+Public+Beach+Abu+Dhabi" target="_blank" rel="noopener noreferrer" class="button-spot-action map-link">
+                <span>📍</span> <span class="spot-directions-text">Get Directions</span>
+              </a>
+              <button type="button" class="button-spot-action nominate-btn" data-spot="Saadiyat Coastal Reserve, Abu Dhabi">
+                <span>🤝</span> <span class="spot-nominate-text">Nominate for Cleanup</span>
+              </button>
+            </div>
           </article>
+
+          <article class="spot-card reveal" data-emirate="sharjah" data-search="al heera beach sharjah community hub picnic litter cans youth cleanups">
+            <div class="spot-card-top">
+              <span class="spot-city">Sharjah</span>
+              <span class="spot-badge badge-community" id="spot5Badge">Community Hub</span>
+            </div>
+            <h3 id="spot5Title">Al Heera Beach</h3>
+            <p id="spot5Text">A major gathering hub along the Sharjah coastline where active youth volunteer squads coordinate weekend cleanups and promote waste separation.</p>
+            <div class="spot-meta-details">
+              <div class="spot-meta-row">
+                <span class="meta-icon">🗑️</span>
+                <span class="meta-label spot-debris-label">Target Debris:</span>
+                <span class="meta-value" id="spot5Debris">Beverage cans, takeaway containers, plastic bags</span>
+              </div>
+              <div class="spot-meta-row">
+                <span class="meta-icon">🚗</span>
+                <span class="meta-label spot-amenities-label">Facilities:</span>
+                <span class="meta-value" id="spot5Amenities">Wide parking bays, seaside promenade, waste bins</span>
+              </div>
+            </div>
+            <div class="spot-card-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=Al+Heera+Beach+Sharjah" target="_blank" rel="noopener noreferrer" class="button-spot-action map-link">
+                <span>📍</span> <span class="spot-directions-text">Get Directions</span>
+              </a>
+              <button type="button" class="button-spot-action nominate-btn" data-spot="Al Heera Beach, Sharjah">
+                <span>🤝</span> <span class="spot-nominate-text">Nominate for Cleanup</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="spot-card reveal" data-emirate="sharjah" data-search="al khan beach lagoon sharjah high priority fishing gear plastics tidal flotsam">
+            <div class="spot-card-top">
+              <span class="spot-city">Sharjah</span>
+              <span class="spot-badge badge-priority" id="spot6Badge">High Priority</span>
+            </div>
+            <h3 id="spot6Title">Al Khan Beach & Lagoon</h3>
+            <p id="spot6Text">Adjoining the historical lagoon and maritime heritage area, tidal shifts deposit concentrated marine debris that requires urgent attention.</p>
+            <div class="spot-meta-details">
+              <div class="spot-meta-row">
+                <span class="meta-icon">🗑️</span>
+                <span class="meta-label spot-debris-label">Target Debris:</span>
+                <span class="meta-value" id="spot6Debris">Fishing gear remnants, polystyrene foam, bottles</span>
+              </div>
+              <div class="spot-meta-row">
+                <span class="meta-icon">🚗</span>
+                <span class="meta-label spot-amenities-label">Facilities:</span>
+                <span class="meta-value" id="spot6Amenities">Museum parking, maritime center, public access</span>
+              </div>
+            </div>
+            <div class="spot-card-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=Al+Khan+Beach+Sharjah" target="_blank" rel="noopener noreferrer" class="button-spot-action map-link">
+                <span>📍</span> <span class="spot-directions-text">Get Directions</span>
+              </a>
+              <button type="button" class="button-spot-action nominate-btn" data-spot="Al Khan Beach & Lagoon, Sharjah">
+                <span>🤝</span> <span class="spot-nominate-text">Nominate for Cleanup</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="spot-card reveal" data-emirate="ajman" data-search="ajman beachfront corniche active monitoring takeaway waste straws bottles">
+            <div class="spot-card-top">
+              <span class="spot-city">Ajman</span>
+              <span class="spot-badge badge-monitoring" id="spot7Badge">Active Monitoring</span>
+            </div>
+            <h3 id="spot7Title">Ajman Public Beachfront</h3>
+            <p id="spot7Text">A central coastal stretch heavily visited by families. Routine volunteer patrols help prevent windblown debris from entering the water.</p>
+            <div class="spot-meta-details">
+              <div class="spot-meta-row">
+                <span class="meta-icon">🗑️</span>
+                <span class="meta-label spot-debris-label">Target Debris:</span>
+                <span class="meta-value" id="spot7Debris">Fast-food packaging, plastic bottles, straws</span>
+              </div>
+              <div class="spot-meta-row">
+                <span class="meta-icon">🚗</span>
+                <span class="meta-label spot-amenities-label">Facilities:</span>
+                <span class="meta-value" id="spot7Amenities">Corniche parking, solar lighting, waste bins</span>
+              </div>
+            </div>
+            <div class="spot-card-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=Ajman+Beach" target="_blank" rel="noopener noreferrer" class="button-spot-action map-link">
+                <span>📍</span> <span class="spot-directions-text">Get Directions</span>
+              </a>
+              <button type="button" class="button-spot-action nominate-btn" data-spot="Ajman Public Beachfront, Ajman">
+                <span>🤝</span> <span class="spot-nominate-text">Nominate for Cleanup</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="spot-card reveal" data-emirate="ajman northern" data-search="al zorah coastal mangroves ajman northern ecology hotspot entangled plastic bags styrofoam">
+            <div class="spot-card-top">
+              <span class="spot-city">Ajman</span>
+              <span class="spot-badge badge-ecology" id="spot8Badge">Ecology Hotspot</span>
+            </div>
+            <h3 id="spot8Title">Al Zorah Mangrove Coast</h3>
+            <p id="spot8Text">A precious wetland and coastal mangrove forest sheltering migratory flamingos and coastal birds. Requires gentle, non-intrusive perimeter sweeps.</p>
+            <div class="spot-meta-details">
+              <div class="spot-meta-row">
+                <span class="meta-icon">🗑️</span>
+                <span class="meta-label spot-debris-label">Target Debris:</span>
+                <span class="meta-value" id="spot8Debris">Entangled plastic bags, styrofoam foam, drift bottles</span>
+              </div>
+              <div class="spot-meta-row">
+                <span class="meta-icon">🚗</span>
+                <span class="meta-label spot-amenities-label">Facilities:</span>
+                <span class="meta-value" id="spot8Amenities">Nature reserve boundary, kayak launch, eco-trails</span>
+              </div>
+            </div>
+            <div class="spot-card-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=Al+Zorah+Natural+Reserve+Ajman" target="_blank" rel="noopener noreferrer" class="button-spot-action map-link">
+                <span>📍</span> <span class="spot-directions-text">Get Directions</span>
+              </a>
+              <button type="button" class="button-spot-action nominate-btn" data-spot="Al Zorah Mangrove Coast, Ajman">
+                <span>🤝</span> <span class="spot-nominate-text">Nominate for Cleanup</span>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <p class="spots-empty-state" id="spotsEmptyState" style="display: none;">No cleanup spots match your search. Try another keyword or filter.</p>
+
+        <div class="spot-suggest-banner glass-card reveal">
+          <div class="spot-suggest-copy">
+            <h3 id="spotSuggestTitle">Know another shoreline that needs urgent attention?</h3>
+            <p id="spotSuggestText">Help us expand our coastal map. Recommend a polluted beach or mangrove inlet on our Community Wall so local volunteers can take action.</p>
+          </div>
+          <a href="#community" class="button button-primary" id="spotSuggestBtn">Nominate a New Spot</a>
         </div>
       </section>
 
       <section class="community section" id="community">
         <div class="section-heading reveal">
           <p class="eyebrow" id="communityEyebrow">Community Wall</p>
-          <h2 id="communityTitle">A place where people can share photos, thoughts and recommend new cleanup locations.</h2>
+          <h2 id="communityTitle">A collaborative platform to share field reports, propose cleanups, and exchange ideas.</h2>
         </div>
 
         <div class="community-layout">
           <article class="community-form-wrap reveal">
             <h3 id="formTitle">Publish a message</h3>
-            <p id="formIntro">The form already works on the frontend: new posts appear on the wall instantly in the browser.</p>
+            <p id="formIntro">Submit a cleanup report, suggest a polluted beach, or share your environmental story with volunteers across the UAE.</p>
             <form class="community-form" id="communityForm">
               <label>
                 <span id="authorLabel">Your name</span>
@@ -240,14 +484,62 @@
           <article class="community-feed reveal">
             <div class="feed-head">
               <h3 id="feedTitle">Community feed</h3>
-              <p id="feedIntro">Below are starter posts and everything submitted through the form.</p>
+              <p id="feedIntro">Real-time reports, recommendations, and field updates shared by active volunteers across the Emirates.</p>
             </div>
             <div class="feed-list" id="feedList"></div>
           </article>
         </div>
       </section>
 
+      <section class="cta section">
+        <div class="cta-card reveal">
+          <div class="cta-copy">
+            <p class="eyebrow" id="ctaEyebrow">Join the Movement</p>
+            <h2 id="ctaTitle">Ready to make a tangible impact on UAE coastlines?</h2>
+            <p id="ctaText">Every plastic bottle removed, every shoreline surveyed, and every volunteer trained brings us closer to pristine waters and thriving marine habitats.</p>
+          </div>
+          <a class="button button-secondary" href="#community" id="ctaButton">Get Involved Today</a>
+        </div>
+      </section>
+
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="brand">
+            <img class="brand-logo" src="assets/logo.jpg" alt="Clean Shores UAE logo">
+            <span class="brand-copy">
+              <strong id="footerBrandTitle">Clean Shores UAE</strong>
+              <small id="footerBrandSubtitle">For beaches, community and action</small>
+            </span>
+          </div>
+          <p class="footer-desc" id="footerDesc">An independent environmental initiative championing pristine coastlines, marine biodiversity conservation, and public participation across the United Arab Emirates.</p>
+        </div>
+        <div class="footer-nav-group">
+          <h4 id="footerNavTitle">Quick Navigation</h4>
+          <nav class="footer-links">
+            <a href="#mission" id="footerNavMission">Mission</a>
+            <a href="#media" id="footerNavMedia">Media Gallery</a>
+            <a href="#cleanup-spots" id="footerNavSpots">Cleanup Spots</a>
+            <a href="#community" id="footerNavCommunity">Community Wall</a>
+          </nav>
+        </div>
+        <div class="footer-nav-group">
+          <h4 id="footerEmiratesTitle">Emirates Monitored</h4>
+          <ul class="footer-list">
+            <li>Dubai & Abu Dhabi</li>
+            <li>Sharjah & Ajman</li>
+            <li>Ras Al Khaimah</li>
+            <li>Fujairah & Umm Al Quwain</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p id="footerCopyright">© 2026 Clean Shores UAE. Dedicated to clean coasts and marine preservation.</p>
+        <p class="footer-tagline" id="footerTagline">Protecting our oceans, one shore at a time.</p>
+      </div>
+    </footer>
   </div>
 
   <template id="postTemplate">

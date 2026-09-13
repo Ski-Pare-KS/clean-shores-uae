@@ -509,7 +509,306 @@ h3 {
 }
 
 .spots-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+.spots-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 18px 24px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 24px rgba(10, 33, 28, 0.04);
+}
+
+.spot-stat-item {
+  text-align: center;
+}
+
+.spot-stat-num {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  color: var(--accent-deep);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.spot-stat-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+.spots-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.spots-filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.spot-chip {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.65);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.spot-chip:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--accent);
+}
+
+.spot-chip.is-active {
+  background: var(--accent-deep);
+  color: white;
+  border-color: var(--accent-deep);
+  box-shadow: 0 4px 14px rgba(11, 69, 56, 0.28);
+}
+
+.spots-search-wrap {
+  flex-grow: 1;
+  max-width: 360px;
+  min-width: 220px;
+}
+
+#spotsSearchInput {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 0.88rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+#spotsSearchInput:focus {
+  border-color: var(--accent);
+  background: white;
+}
+
+.spot-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.spot-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 65px rgba(10, 33, 28, 0.16);
+}
+
+.spot-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.spot-city {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+}
+
+.spot-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.badge-priority {
+  background: rgba(225, 29, 72, 0.12);
+  color: #be123c;
+  border: 1px solid rgba(225, 29, 72, 0.25);
+}
+
+.badge-monitoring {
+  background: rgba(234, 138, 0, 0.14);
+  color: #b45309;
+  border: 1px solid rgba(234, 138, 0, 0.28);
+}
+
+.badge-community {
+  background: rgba(14, 106, 85, 0.12);
+  color: var(--accent-deep);
+  border: 1px solid rgba(14, 106, 85, 0.24);
+}
+
+.badge-reserve {
+  background: rgba(16, 185, 129, 0.14);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-ecology {
+  background: rgba(13, 148, 136, 0.14);
+  color: #0f766e;
+  border: 1px solid rgba(13, 148, 136, 0.3);
+}
+
+.spot-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.32rem;
+  line-height: 1.25;
+}
+
+.spot-card p {
+  margin-bottom: 14px;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.spot-meta-details {
+  margin: 12px 0 18px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 16px;
+  border: 1px solid rgba(16, 43, 36, 0.07);
+  display: grid;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.spot-meta-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  line-height: 1.45;
+}
+
+.meta-icon {
+  flex-shrink: 0;
+  font-size: 0.95rem;
+}
+
+.meta-label {
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.meta-value {
+  color: var(--muted);
+}
+
+.spot-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.button-spot-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 38px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 180ms ease;
+  text-decoration: none;
+  border: 1px solid var(--line);
+}
+
+.map-link {
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--text);
+}
+
+.map-link:hover {
+  background: white;
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.nominate-btn {
+  background: rgba(14, 106, 85, 0.1);
+  color: var(--accent-deep);
+  border-color: rgba(14, 106, 85, 0.22);
+}
+
+.nominate-btn:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.spots-empty-state {
+  padding: 34px 20px;
+  text-align: center;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.52);
+  border: 1px dashed var(--line);
+  color: var(--muted);
+  font-size: 0.96rem;
+  margin: 16px 0 0;
+}
+
+.spot-suggest-banner {
+  margin-top: 28px;
+  padding: 26px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(240, 247, 242, 0.65));
+}
+
+.spot-suggest-copy h3 {
+  margin-bottom: 6px;
+  font-size: 1.25rem;
+}
+
+.spot-suggest-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 60ch;
+}
+
+.upload-action-box {
+  margin-top: 18px;
 }
 
 .spot-city,
@@ -569,6 +868,24 @@ html[dir="rtl"] .brand-copy {
 html[dir="rtl"] .media-note ul {
   padding-left: 0;
   padding-right: 18px;
+}
+
+html[dir="rtl"] .spot-meta-details,
+html[dir="rtl"] .spot-card-top,
+html[dir="rtl"] .spots-toolbar,
+html[dir="rtl"] .footer-inner,
+html[dir="rtl"] .footer-bottom,
+html[dir="rtl"] .spot-suggest-banner {
+  direction: rtl;
+}
+
+html[dir="rtl"] .footer-inner,
+html[dir="rtl"] .spot-suggest-banner {
+  text-align: right;
+}
+
+html[dir="rtl"] .spot-meta-row {
+  flex-direction: row;
 }
 
 .feed-list {
@@ -671,12 +988,93 @@ html[dir="rtl"] .media-note ul {
   transform: translateY(0);
 }
 
+/* Site Footer */
+.site-footer {
+  margin-top: 80px;
+  padding: 50px 0 30px;
+  border-top: 1px solid rgba(16, 43, 36, 0.12);
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 36px;
+}
+
+.footer-brand .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-desc {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  max-width: 44ch;
+  margin-top: 14px;
+}
+
+.footer-nav-group h4 {
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-deep);
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-size: 0.92rem;
+  transition: color 180ms ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.footer-bottom {
+  padding-top: 24px;
+  border-top: 1px solid rgba(16, 43, 36, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.footer-tagline {
+  margin: 0;
+  font-style: italic;
+}
+
 @media (max-width: 1024px) {
   .hero,
   .media-layout,
   .mission-layout,
   .community-layout,
-  .spots-grid,
   .stats,
   .cta-card {
     grid-template-columns: 1fr;
@@ -684,6 +1082,16 @@ html[dir="rtl"] .media-note ul {
 
   .cta-card {
     display: grid;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .spot-suggest-banner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -728,6 +1136,24 @@ html[dir="rtl"] .media-note ul {
 
   .hero-visual {
     padding: 16px;
+  }
+
+  .spots-stats-bar {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .spots-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .spots-search-wrap {
+    max-width: 100%;
+  }
+
+  .spots-grid {
+    grid-template-columns: 1fr;
   }
 
   .post-meta {

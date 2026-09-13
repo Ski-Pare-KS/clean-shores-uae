@@ -54,7 +54,7 @@ if (carouselSlides.length > 1) {
 const translations = {
   en: {
     documentTitle: "Clean Shores UAE | Protect Beaches Together",
-    metaDescription: "Public website for cleaner beaches in the UAE with eco campaigns, community posts, photos, videos, cleanup spot recommendations and open discussion.",
+    metaDescription: "Public platform for cleaner beaches in the UAE with coastal campaigns, community posts, cleanup spot directory, and open volunteer participation.",
     brandTitle: "Clean Shores UAE",
     brandSubtitle: "For beaches, community and action",
     navMission: "Mission",
@@ -71,40 +71,95 @@ const translations = {
     heroCardTitle: "Our mission is to protect UAE beaches",
     heroCardText: "by turning cleanup ideas into shared community action.",
     missionEyebrow: "Why This Matters",
-    missionTitle: "A public website that turns environmental care into shared action.",
+    missionTitle: "A public platform that turns environmental care into shared action.",
     stat1Label: "Photos and videos",
     stat1Title: "Media Hub",
-    stat1Text: "You can upload your own visuals from cleanup events, eco campaigns and field activities.",
+    stat1Text: "Explore and share visuals from cleanup events, eco campaigns and field activities across the country.",
     stat2Label: "Suggested places",
     stat2Title: "Cleanup Spots",
-    stat2Text: "Users can recommend beaches and coastal areas in the UAE that need urgent cleanup attention.",
+    stat2Text: "Locate and recommend beaches and coastal areas in the UAE that need urgent cleanup attention.",
     stat3Label: "Conversation",
     stat3Title: "Open Discussion",
     stat3Text: "People can share thoughts, ideas, experiences and discuss local environmental initiatives.",
-    mediaEyebrow: "Owner Media Block",
-    mediaTitle: "A dedicated space for your photos and videos from environmental events.",
-    mediaImageAlt: "Green natural area",
-    mediaFeatureTitle: "Main campaign story",
-    mediaFeatureText: "Use this block as a showcase for your strongest photos, videos and reports from beach cleanup actions.",
-    mediaListTitle: "What you can place here",
-    mediaList1: "before-and-after cleanup photos",
-    mediaList2: "videos from beach cleanup days",
-    mediaList3: "short interviews with volunteers",
-    mediaList4: "posters for upcoming events",
-    uploadTitle: "Media upload area",
-    uploadText: "This is a ready interface for future integration with backend services or cloud storage.",
+    mediaEyebrow: "Conservation in Action",
+    mediaTitle: "Documenting our coastal conservation efforts across the Emirates.",
+    mediaImageAlt: "Green natural coastal area",
+    mediaFeatureTitle: "Active Shoreline Restoration",
+    mediaFeatureText: "Our volunteer teams regularly survey, clean, and protect UAE shorelines, safeguarding sensitive marine ecosystems for future generations.",
+    mediaListTitle: "Our Key Programs",
+    mediaList1: "Community weekend coastal cleanups",
+    mediaList2: "Marine debris auditing & sorting",
+    mediaList3: "Youth & school conservation workshops",
+    mediaList4: "Pollution hotspot documentation & advocacy",
+    uploadTitle: "Share Your Action Media",
+    uploadText: "Participated in a recent coastal cleanup? Submit your photos and video clips to be highlighted on our community wall.",
+    uploadCta: "Contribute to Community Wall",
     uploadPhotoLabel: "Upload photo",
     uploadVideoLabel: "Upload video",
-    spotsEyebrow: "Recommended Spots",
-    spotsTitle: "Beach areas across the UAE that can be highlighted for future cleanup actions.",
-    spot1Text: "A strong candidate for regular community cleanup sessions and visual progress reports.",
-    spot2Text: "Suitable for family events, volunteer activities and public environmental education.",
-    spot3Text: "A practical location for local recommendations and youth involvement in cleanup work.",
-    spot4Text: "Useful for documenting problem zones and tracking improvement after each cleanup effort.",
+    spotsEyebrow: "Coastal Directory",
+    spotsTitle: "Priority UAE beach areas highlighted for community cleanup action.",
+    spotStatSpots: "Monitored Locations",
+    spotStatEmirates: "Emirates Covered",
+    spotStatVolunteer: "Community Driven",
+    filterAll: "All Emirates",
+    filterDubai: "Dubai",
+    filterAbuDhabi: "Abu Dhabi",
+    filterSharjah: "Sharjah",
+    filterAjman: "Ajman",
+    filterNorthern: "Northern Emirates",
+    spotsSearchPlaceholder: "Search by beach name, emirate, or keyword...",
+    spotsEmptyState: "No cleanup spots match your search. Try another keyword or filter.",
+    spotDirections: "Get Directions",
+    spotNominate: "Nominate for Cleanup",
+    spotDebrisLabel: "Target Debris:",
+    spotAmenitiesLabel: "Facilities:",
+    spot1Badge: "High Priority",
+    spot1Title: "Jumeirah Open Beach",
+    spot1Text: "A high-footfall public stretch where morning volunteer sweeps remove tidal debris and tourist litter before it washes out into Gulf waters.",
+    spot1Debris: "Single-use plastics, bottle caps, food wrappers",
+    spot1Amenities: "Public parking, recycling bins, family walking paths",
+    spot2Badge: "Active Monitoring",
+    spot2Title: "Kite Beach & Canal Edge",
+    spot2Text: "A lively water-sports hub with extensive shoreline. Ideal for targeted microplastic collection and community education along the dunes.",
+    spot2Debris: "Microplastics, beverage cups, straws, bottle caps",
+    spot2Amenities: "Paved promenade, washrooms, shade areas",
+    spot3Badge: "Family Friendly",
+    spot3Title: "Abu Dhabi Corniche Beach",
+    spot3Text: "An expansive urban shoreline perfect for large school and corporate eco-days, volunteer orientations, and organized debris audits.",
+    spot3Debris: "Snack wrappers, beverage cans, plastic bottles",
+    spot3Amenities: "Multiple parking plazas, shaded lawns, accessible pathways",
+    spot4Badge: "Protected Reserve",
+    spot4Title: "Saadiyat Marine & Coastal Reserve",
+    spot4Text: "A critical nesting ground for endangered Hawksbill turtles. Cleanups focus on clearing discarded marine ropes and tangled plastic flotsam.",
+    spot4Debris: "Abandoned fishing lines, ropes, floating plastics",
+    spot4Amenities: "Designated eco-boardwalks, restricted dunes",
+    spot5Badge: "Community Hub",
+    spot5Title: "Al Heera Beach",
+    spot5Text: "A major gathering hub along the Sharjah coastline where active youth volunteer squads coordinate weekend cleanups and promote waste separation.",
+    spot5Debris: "Beverage cans, takeaway containers, plastic bags",
+    spot5Amenities: "Wide parking bays, seaside promenade, waste bins",
+    spot6Badge: "High Priority",
+    spot6Title: "Al Khan Beach & Lagoon",
+    spot6Text: "Adjoining the historical lagoon and maritime heritage area, tidal shifts deposit concentrated marine debris that requires urgent attention.",
+    spot6Debris: "Fishing gear remnants, polystyrene foam, bottles",
+    spot6Amenities: "Museum parking, maritime center, public access",
+    spot7Badge: "Active Monitoring",
+    spot7Title: "Ajman Public Beachfront",
+    spot7Text: "A central coastal stretch heavily visited by families. Routine volunteer patrols help prevent windblown debris from entering the water.",
+    spot7Debris: "Fast-food packaging, plastic bottles, straws",
+    spot7Amenities: "Corniche parking, solar lighting, waste bins",
+    spot8Badge: "Ecology Hotspot",
+    spot8Title: "Al Zorah Mangrove Coast",
+    spot8Text: "A precious wetland and coastal mangrove forest sheltering migratory flamingos and coastal birds. Requires gentle, non-intrusive perimeter sweeps.",
+    spot8Debris: "Entangled plastic bags, styrofoam foam, drift bottles",
+    spot8Amenities: "Nature reserve boundary, kayak launch, eco-trails",
+    spotSuggestTitle: "Know another shoreline that needs urgent attention?",
+    spotSuggestText: "Help us expand our coastal map. Recommend a polluted beach or mangrove inlet on our Community Wall so local volunteers can take action.",
+    spotSuggestBtn: "Nominate a New Spot",
     communityEyebrow: "Community Wall",
-    communityTitle: "A place where people can share photos, thoughts and recommend new cleanup locations.",
+    communityTitle: "A collaborative platform to share field reports, propose cleanups, and exchange ideas.",
     formTitle: "Publish a message",
-    formIntro: "Posts are now loaded from the backend API and can be shared across users when the site is deployed.",
+    formIntro: "Submit a cleanup report, suggest a polluted beach, or share your environmental story with volunteers across the UAE.",
     authorLabel: "Your name",
     authorPlaceholder: "For example, Amina",
     typeLabel: "Post type",
@@ -121,10 +176,22 @@ const translations = {
     messagePlaceholder: "Share an idea, a beach area, a concern or a story from a cleanup.",
     submitButton: "Publish",
     feedTitle: "Community feed",
-    feedIntro: "Below are posts loaded from the backend and everything submitted through the form.",
-    ctaEyebrow: "Next Step",
-    ctaTitle: "To make this site fully public on the internet, the next step is live hosting, a domain and production storage.",
-    ctaButton: "Continue building the project",
+    feedIntro: "Real-time reports, recommendations, and field updates shared by active volunteers across the Emirates.",
+    ctaEyebrow: "Join the Movement",
+    ctaTitle: "Ready to make a tangible impact on UAE coastlines?",
+    ctaText: "Every plastic bottle removed, every shoreline surveyed, and every volunteer trained brings us closer to pristine waters and thriving marine habitats.",
+    ctaButton: "Get Involved Today",
+    footerBrandTitle: "Clean Shores UAE",
+    footerBrandSubtitle: "For beaches, community and action",
+    footerDesc: "An independent environmental initiative championing pristine coastlines, marine biodiversity conservation, and public participation across the United Arab Emirates.",
+    footerNavTitle: "Quick Navigation",
+    footerNavMission: "Mission",
+    footerNavMedia: "Media Gallery",
+    footerNavSpots: "Cleanup Spots",
+    footerNavCommunity: "Community Wall",
+    footerEmiratesTitle: "Emirates Monitored",
+    footerCopyright: "© 2026 Clean Shores UAE. Dedicated to clean coasts and marine preservation.",
+    footerTagline: "Protecting our oceans, one shore at a time.",
     postMediaText: "Open photo / video",
     defaultAuthor: "Community member",
     defaultType: "Post",
@@ -132,12 +199,12 @@ const translations = {
     loadingFeed: "Loading community posts...",
     invalidForm: "Please add your name and message before publishing.",
     formSuccess: "Post published successfully.",
-    formError: "The server could not save the post. Check that the backend is running.",
+    formError: "Unable to save your post right now. Please check your connection and try again.",
     formLoading: "Publishing..."
   },
   ru: {
     documentTitle: "Clean Shores UAE | Чистые пляжи вместе",
-    metaDescription: "Публичный сайт о чистоте пляжей в ОАЭ: экологические акции, публикации сообщества, фото, видео, рекомендации мест для уборки и обсуждения.",
+    metaDescription: "Публичный портал о чистоте пляжей в ОАЭ: экологические акции, публикации сообщества, каталог мест для уборки и участие волонтёров.",
     brandTitle: "Clean Shores UAE",
     brandSubtitle: "Для пляжей, сообщества и действий",
     navMission: "Миссия",
@@ -154,40 +221,95 @@ const translations = {
     heroCardTitle: "Наша миссия — защищать пляжи ОАЭ",
     heroCardText: "превращая идеи уборок в совместные действия сообщества.",
     missionEyebrow: "Почему это важно",
-    missionTitle: "Публичный сайт, который превращает заботу о природе в совместное действие.",
+    missionTitle: "Публичный портал, который превращает заботу о природе в совместное действие.",
     stat1Label: "Фото и видео",
     stat1Title: "Медиа-хаб",
-    stat1Text: "Вы сможете добавлять собственные материалы с уборок, акций и экологических выездов.",
+    stat1Text: "Смотрите и делитесь материалами с уборок, акций и экологических выездов по всей стране.",
     stat2Label: "Рекомендуемые места",
     stat2Title: "Точки уборки",
-    stat2Text: "Пользователи смогут советовать пляжи и прибрежные зоны в ОАЭ, которым срочно нужна уборка.",
+    stat2Text: "Находите и советуйте пляжи и прибрежные зоны в ОАЭ, которым срочно требуется уборка.",
     stat3Label: "Общение",
     stat3Title: "Открытое обсуждение",
-    stat3Text: "Люди смогут делиться мыслями, идеями, опытом и обсуждать локальные экологические инициативы.",
-    mediaEyebrow: "Блок ваших медиа",
-    mediaTitle: "Отдельное пространство для ваших фото и видео с экологических мероприятий.",
-    mediaImageAlt: "Зелёная природная зона",
-    mediaFeatureTitle: "Главная история кампании",
-    mediaFeatureText: "Используйте этот блок как витрину для лучших фото, видео и отчётов о пляжных уборках.",
-    mediaListTitle: "Что можно разместить здесь",
-    mediaList1: "фотографии до и после уборки",
-    mediaList2: "видео с дней уборки пляжей",
-    mediaList3: "короткие интервью с волонтёрами",
-    mediaList4: "афиши будущих мероприятий",
-    uploadTitle: "Зона загрузки медиа",
-    uploadText: "Это готовый интерфейс для будущей интеграции с backend-сервисами или облачным хранилищем.",
+    stat3Text: "Люди могут делиться мыслями, идеями, опытом и обсуждать локальные экологические инициативы.",
+    mediaEyebrow: "Инициатива в действии",
+    mediaTitle: "Хроника наших экологических акций на побережье ОАЭ.",
+    mediaImageAlt: "Зелёная прибрежная зона",
+    mediaFeatureTitle: "Реальное восстановление берегов",
+    mediaFeatureText: "Команды волонтёров регулярно обследуют, очищают и защищают пляжи ОАЭ, сохраняя уникальные морские экосистемы для будущих поколений.",
+    mediaListTitle: "Ключевые направления",
+    mediaList1: "Организованные прибрежные субботники",
+    mediaList2: "Сортировка и учёт собранного пластика",
+    mediaList3: "Экологические воркшопы для школ и молодёжи",
+    mediaList4: "Мониторинг загрязнений и гражданские отчёты",
+    uploadTitle: "Поделитесь материалами с акций",
+    uploadText: "Участвовали в уборке берега? Опубликуйте свои фото или видео на нашей стене сообщества.",
+    uploadCta: "Добавить на стену сообщества",
     uploadPhotoLabel: "Загрузить фото",
     uploadVideoLabel: "Загрузить видео",
-    spotsEyebrow: "Рекомендуемые места",
-    spotsTitle: "Пляжные зоны по всему ОАЭ, которые можно выделить для будущих уборок.",
-    spot1Text: "Хороший кандидат для регулярных уборок сообщества и визуальных отчётов о прогрессе.",
-    spot2Text: "Подходит для семейных мероприятий, волонтёрских активностей и экологического просвещения.",
-    spot3Text: "Практичная локация для локальных рекомендаций и вовлечения молодёжи в уборки.",
-    spot4Text: "Удобна для фиксации проблемных зон и отслеживания улучшений после каждой уборки.",
+    spotsEyebrow: "Каталог побережья",
+    spotsTitle: "Прибрежные зоны ОАЭ, требующие внимания и проведения экологических уборок.",
+    spotStatSpots: "Точек на контроле",
+    spotStatEmirates: "Эмиратов охвачено",
+    spotStatVolunteer: "Участие сообщества",
+    filterAll: "Все эмираты",
+    filterDubai: "Дубай",
+    filterAbuDhabi: "Абу-Даби",
+    filterSharjah: "Шарджа",
+    filterAjman: "Аджман",
+    filterNorthern: "Северные эмираты",
+    spotsSearchPlaceholder: "Поиск по названию пляжа, эмирату или ключевому слову...",
+    spotsEmptyState: "Места не найдены. Попробуйте изменить поисковый запрос или фильтр.",
+    spotDirections: "Маршрут на карте",
+    spotNominate: "Выбрать для уборки",
+    spotDebrisLabel: "Основной мусор:",
+    spotAmenitiesLabel: "Инфраструктура:",
+    spot1Badge: "Высокий приоритет",
+    spot1Title: "Jumeirah Open Beach",
+    spot1Text: "Популярный общественный пляж, где утренние рейды волонтёров удаляют приливной мусор и пластик до того, как он попадёт в залив.",
+    spot1Debris: "Пластиковые бутылки, крышки, упаковка от еды",
+    spot1Amenities: "Общественная парковка, урны для раздельного сбора, дорожки",
+    spot2Badge: "Постоянный мониторинг",
+    spot2Title: "Kite Beach и канал",
+    spot2Text: "Оживлённая зона водных видов спорта с протяжённым берегом. Идеальна для сбора микропластика и экопросвещения вдоль дюн.",
+    spot2Debris: "Микропластик, стаканчики, трубочки, крышки",
+    spot2Amenities: "Пешеходная набережная, санузлы, теневые навесы",
+    spot3Badge: "Для всей семьи",
+    spot3Title: "Abu Dhabi Corniche Beach",
+    spot3Text: "Просторная городская набережная, прекрасно подходящая для школьных и корпоративных эко-дней, инструктажей и аудита отходов.",
+    spot3Debris: "Упаковки от снеков, жестяные банки, бутылки",
+    spot3Amenities: "Парковочные зоны, тенистые газоны, удобный спуск к воде",
+    spot4Badge: "Заповедная зона",
+    spot4Title: "Морской заповедник Saadiyat",
+    spot4Text: "Критически важное место гнездования морских черепах бисса. Акцент на очистку от старых рыболовных канатов и плавающего мусора.",
+    spot4Debris: "Остатки рыболовных снастей, верёвки, пластиковый мусор",
+    spot4Amenities: "Оборудованные эко-настилы, охраняемые дюны",
+    spot5Badge: "Молодёжный центр",
+    spot5Title: "Al Heera Beach",
+    spot5Text: "Популярное место отдыха в Шардже, где молодёжные команды волонтёров проводят регулярные субботники и разделяют отходы.",
+    spot5Debris: "Алюминиевые банки, контейнеры для еды, пакеты",
+    spot5Amenities: "Широкая парковка, прогулочная зона, контейнеры для мусора",
+    spot6Badge: "Высокий приоритет",
+    spot6Title: "Пляж и лагуна Al Khan",
+    spot6Text: "Прилегает к исторической лагуне и морскому музею. Приливы приносят плотный слой морского мусора, требующего оперативной уборки.",
+    spot6Debris: "Обрывки сетей, пенопласт, бутылки",
+    spot6Amenities: "Парковка у музея, морской центр, свободный доступ",
+    spot7Badge: "Постоянный мониторинг",
+    spot7Title: "Городской пляж Аджмана",
+    spot7Text: "Центральная прибрежная линия, популярная среди семей. Регулярные патрули помогают предотвратить унос мусора ветром в море.",
+    spot7Debris: "Пакеты от фастфуда, пластиковые бутылки, трубочки",
+    spot7Amenities: "Парковка вдоль набережной, освещение, урны",
+    spot8Badge: "Эко-жемчужина",
+    spot8Title: "Мангровый берег Al Zorah",
+    spot8Text: "Ценные водно-болотные угодья и мангровые заросли с фламинго и редкими птицами. Требует бережной точечной очистки по периметру.",
+    spot8Debris: "Застрявшие в корнях пакеты, пенопласт, пластиковая тара",
+    spot8Amenities: "Граница природного резервата, прокат каяков, эко-тропы",
+    spotSuggestTitle: "Знаете пляж, которому срочно требуется уборка?",
+    spotSuggestText: "Помогите расширить нашу карту. Предложите загрязнённый участок на Стене сообщества, чтобы волонтёры могли объединиться для акции.",
+    spotSuggestBtn: "Предложить новую точку",
     communityEyebrow: "Стена сообщества",
-    communityTitle: "Место, где люди могут делиться фото, мыслями и рекомендовать новые точки для уборки.",
+    communityTitle: "Открытая площадка для отчётов с акций, предложений локаций и обмена идеями.",
     formTitle: "Опубликовать сообщение",
-    formIntro: "Посты теперь загружаются из backend API и смогут быть общими для всех пользователей после публикации сайта.",
+    formIntro: "Отправьте отчёт об уборке, порекомендуйте пляж или поделитесь экологической историей с волонтёрами по всему ОАЭ.",
     authorLabel: "Ваше имя",
     authorPlaceholder: "Например, Amina",
     typeLabel: "Тип публикации",
@@ -204,10 +326,22 @@ const translations = {
     messagePlaceholder: "Поделитесь идеей, местом, проблемой или историей с уборки.",
     submitButton: "Опубликовать",
     feedTitle: "Лента сообщества",
-    feedIntro: "Ниже посты из backend и всё, что будет отправлено через форму.",
-    ctaEyebrow: "Следующий шаг",
-    ctaTitle: "Чтобы сайт полноценно работал для всех в интернете, дальше нужны хостинг, домен и production-хранилище.",
-    ctaButton: "Продолжить развитие проекта",
+    feedIntro: "Актуальные отчёты, рекомендации и полевые новости от волонтёров со всего ОАЭ.",
+    ctaEyebrow: "Присоединяйтесь к движению",
+    ctaTitle: "Готовы внести свой вклад в чистоту побережий ОАЭ?",
+    ctaText: "Каждая убранная пластиковая бутылка, каждый исследованный берег и каждый новый участник приближают нас к чистому морю и сохранению морской фауны.",
+    ctaButton: "Участвовать",
+    footerBrandTitle: "Clean Shores UAE",
+    footerBrandSubtitle: "Для пляжей, сообщества и действий",
+    footerDesc: "Независимая экологическая инициатива за сохранение чистоты побережий, защиту морского биоразнообразия и общественное участие в ОАЭ.",
+    footerNavTitle: "Навигация",
+    footerNavMission: "Миссия",
+    footerNavMedia: "Медиа-галерея",
+    footerNavSpots: "Точки уборки",
+    footerNavCommunity: "Сообщество",
+    footerEmiratesTitle: "Охваченные эмираты",
+    footerCopyright: "© 2026 Clean Shores UAE. Посвящено защите берегов и морской жизни.",
+    footerTagline: "Защищаем океан берег за берегом.",
     postMediaText: "Открыть фото / видео",
     defaultAuthor: "Участник сообщества",
     defaultType: "Публикация",
@@ -215,12 +349,12 @@ const translations = {
     loadingFeed: "Загружаем публикации сообщества...",
     invalidForm: "Добавьте имя и текст сообщения перед публикацией.",
     formSuccess: "Пост успешно опубликован.",
-    formError: "Сервер не смог сохранить пост. Проверьте, что backend запущен.",
+    formError: "Не удалось сохранить публикацию. Пожалуйста, проверьте подключение и повторите попытку.",
     formLoading: "Публикация..."
   },
   ar: {
     documentTitle: "Clean Shores UAE | شواطئ أنظف معاً",
-    metaDescription: "موقع عام لنظافة الشواطئ في الإمارات مع حملات بيئية ومنشورات المجتمع وصور وفيديوهات واقتراحات لأماكن التنظيف ونقاشات مفتوحة.",
+    metaDescription: "منصة مجتمعية لنظافة الشواطئ في الإمارات مع حملات بيئية ودليل لمواقع التنظيف ومشاركة تطوعية مفتوحة.",
     brandTitle: "Clean Shores UAE",
     brandSubtitle: "للشواطئ والمجتمع والعمل",
     navMission: "المهمة",
@@ -237,40 +371,95 @@ const translations = {
     heroCardTitle: "مهمتنا حماية شواطئ الإمارات",
     heroCardText: "من خلال تحويل أفكار التنظيف إلى عمل مجتمعي مشترك.",
     missionEyebrow: "لماذا هذا مهم",
-    missionTitle: "موقع عام يحوّل العناية بالبيئة إلى عمل جماعي.",
+    missionTitle: "منصة عامة تحوّل العناية بالبيئة إلى عمل جماعي.",
     stat1Label: "الصور والفيديو",
     stat1Title: "مركز الوسائط",
-    stat1Text: "يمكنك إضافة موادك الخاصة من فعاليات التنظيف والحملات البيئية والأنشطة الميدانية.",
+    stat1Text: "استكشف وشارك المواد المصورة من فعاليات التنظيف والحملات البيئية في كافة أرجاء الدولة.",
     stat2Label: "الأماكن المقترحة",
     stat2Title: "مواقع التنظيف",
-    stat2Text: "يمكن للمستخدمين اقتراح الشواطئ والمناطق الساحلية في الإمارات التي تحتاج إلى تنظيف عاجل.",
+    stat2Text: "اكتشف واقترح الشواطئ والمناطق الساحلية في الإمارات التي تحتاج إلى تنظيف عاجل.",
     stat3Label: "النقاش",
     stat3Title: "حوار مفتوح",
     stat3Text: "يمكن للناس مشاركة الأفكار والتجارب ومناقشة المبادرات البيئية المحلية.",
-    mediaEyebrow: "قسم الوسائط الخاص بك",
-    mediaTitle: "مساحة مخصصة لصورك وفيديوهاتك من الفعاليات البيئية.",
-    mediaImageAlt: "منطقة طبيعية خضراء",
-    mediaFeatureTitle: "القصة الرئيسية للحملة",
-    mediaFeatureText: "استخدم هذا القسم كواجهة لأفضل الصور والفيديوهات والتقارير من حملات تنظيف الشواطئ.",
-    mediaListTitle: "ما الذي يمكنك وضعه هنا",
-    mediaList1: "صور قبل وبعد التنظيف",
-    mediaList2: "فيديوهات من أيام تنظيف الشواطئ",
-    mediaList3: "مقابلات قصيرة مع المتطوعين",
-    mediaList4: "ملصقات للفعاليات القادمة",
-    uploadTitle: "منطقة رفع الوسائط",
-    uploadText: "هذه واجهة جاهزة للربط مستقبلاً مع خدمات الخلفية أو التخزين السحابي.",
+    mediaEyebrow: "المبادرة في الميدان",
+    mediaTitle: "توثيق جهودنا لحماية السواحل في مختلف أنحاء الإمارات.",
+    mediaImageAlt: "منطقة ساحلية طبيعية خضراء",
+    mediaFeatureTitle: "إعادة تأهيل الشواطئ",
+    mediaFeatureText: "تعمل فرق المتطوعين بانتظام على فحص الشواطئ وتنظيفها وحمايتها في دولة الإمارات للحفاظ على النظم البيئية البحرية للأجيال القادمة.",
+    mediaListTitle: "برامجنا الأساسية",
+    mediaList1: "حملات تنظيف مجتمعية في عطلة نهاية الأسبوع",
+    mediaList2: "فرز النفايات البحرية وإحصاؤها",
+    mediaList3: "ورش عمل بيئية للمدارس والشباب",
+    mediaList4: "توثيق المناطق المتضررة والدعوة لحمايتها",
+    uploadTitle: "شارك صور وفيديوهات الفعاليات",
+    uploadText: "هل شاركت في حملة تنظيف شاطئية مؤخراً؟ شارك صورك ومقاطع الفيديو على جدار المجتمع لنشرها في حملتنا الوطنية.",
+    uploadCta: "أضف إلى جدار المجتمع",
     uploadPhotoLabel: "رفع صورة",
     uploadVideoLabel: "رفع فيديو",
-    spotsEyebrow: "مواقع مقترحة",
-    spotsTitle: "مناطق شاطئية في أنحاء الإمارات يمكن إبرازها لحملات التنظيف القادمة.",
-    spot1Text: "مكان قوي لتنظيم حملات تنظيف مجتمعية منتظمة وتقارير بصرية عن التقدم.",
-    spot2Text: "مناسب للفعاليات العائلية والأنشطة التطوعية والتوعية البيئية العامة.",
-    spot3Text: "موقع عملي للتوصيات المحلية وإشراك الشباب في أعمال التنظيف.",
-    spot4Text: "مفيد لتوثيق المناطق المتضررة ومتابعة التحسن بعد كل حملة تنظيف.",
+    spotsEyebrow: "دليل السواحل",
+    spotsTitle: "شواطئ ذات أولوية في الإمارات تحتاج إلى حملات تنظيف مجتمعية.",
+    spotStatSpots: "موقع تحت المراقبة",
+    spotStatEmirates: "إمارات مغطاة",
+    spotStatVolunteer: "مبادرة مجتمعية",
+    filterAll: "جميع الإمارات",
+    filterDubai: "دبي",
+    filterAbuDhabi: "أبوظبي",
+    filterSharjah: "الشارقة",
+    filterAjman: "عجمان",
+    filterNorthern: "الإمارات الشمالية",
+    spotsSearchPlaceholder: "ابحث باسم الشاطئ أو الإمارة أو كلمة مفتاحية...",
+    spotsEmptyState: "لم يتم العثور على مواقع مطابقة. جرب كلمة بحث أو تصنيفاً آخر.",
+    spotDirections: "عرض على الخريطة",
+    spotNominate: "ترشيح للتنظيف",
+    spotDebrisLabel: "النفايات الشائعة:",
+    spotAmenitiesLabel: "المرافق:",
+    spot1Badge: "أولوية قصوى",
+    spot1Title: "شاطئ جميرا المفتوح",
+    spot1Text: "شاطئ عام حيوي تتطلب حمايته حملات صباحية لإزالة النفايات ومخلفات الزوار قبل جرفها إلى مياه الخليج.",
+    spot1Debris: "بلاستيك أحادي الاستخدام، أغطية قوارير، أغلفة طعام",
+    spot1Amenities: "مواقف عامة، حاويات فرز، مسارات مشي",
+    spot2Badge: "مراقبة مستمرة",
+    spot2Title: "كايت بيتش وأطراف القناة",
+    spot2Text: "مركز للرياضات الشاطئية؛ مثالي لجمع جزيئات البلاستيك الدقيقة والتوعية البيئية بجوار الكثبان الرملية.",
+    spot2Debris: "بلاستيك دقيق، أكواب مشروبات، قشات، أغطية",
+    spot2Amenities: "ممشى معبد، دورات مياه، مناطق مظللة",
+    spot3Badge: "مناسب للعائلات",
+    spot3Title: "شاطئ كورنيش أبوظبي",
+    spot3Text: "واجهة شاطئية عائلية فسيحة مثالية للفعاليات المدرسية والمؤسسية وحملات التدقيق البيئي.",
+    spot3Debris: "أغلفة وجبات، علب مشروبات، عبوات بلاستيكية",
+    spot3Amenities: "مواقف متعددة، مسطحات خضراء، وصول ميسر",
+    spot4Badge: "محمية طبيعية",
+    spot4Title: "محمية السعديات البحرية",
+    spot4Text: "موطن هام لتعشيش سلاحف منقار الصقر. تركز الحملات على إزالة حبال الصيد والشباك العالقة.",
+    spot4Debris: "شباك صيد مهملة، حبال، بلاستيك طافٍ",
+    spot4Amenities: "ممرات خشبية بيئية، كثبان رملية محمية",
+    spot5Badge: "ملتقى مجتمعي",
+    spot5Title: "شاطئ الحيرة",
+    spot5Text: "وجهة ساحلية بارزة في الشارقة تنشط فيها المجموعات الشبابية لتنظيم حملات نهاية الأسبوع وفرز النفايات.",
+    spot5Debris: "علب مشروبات، عبوات طعام سريعة، أكياس بلاستيكية",
+    spot5Amenities: "مواقف سيارات واسعة، ممشى ساحلي، حاويات نفايات",
+    spot6Badge: "أولوية قصوى",
+    spot6Title: "شاطئ الخان والبحيرة",
+    spot6Text: "محاذٍ للمنطقة التراثية والبحرية، حيث تتجمع بفعل التيارات مخلفات بحرية تحتاج لتدخل دوري سريع.",
+    spot6Debris: "مخلفات شباك الصيد، بوليسترين، عبوات بلاستيكية",
+    spot6Amenities: "مواقف متحف التراث، مركز بحري، وصول عام",
+    spot7Badge: "مراقبة مستمرة",
+    spot7Title: "واجهة عجمان الشاطئية",
+    spot7Text: "امتداد شاطئي رئيسي للعائلات، وتساعد الدوريات التطوعية على منع تطاير النفايات إلى مياه البحر.",
+    spot7Debris: "أغلفة وجبات سريعة، عبوات بلاستيكية، قشات",
+    spot7Amenities: "مواقف على الكورنيش، إنارة بالطاقة الشمسية، حاويات",
+    spot8Badge: "بقعة بيئية هامة",
+    spot8Title: "ساحل أشجار القرم بالزوراء",
+    spot8Text: "أراضٍ رطبة وغابات قرم ساحلية فريدة تأوي طيور الفلامنجو. يتطلب حملات تنظيف حذرة غير مزعجة للبيئة.",
+    spot8Debris: "أكياس بلاستيكية عالقة، فلين صناعي، عبوات منجرفة",
+    spot8Amenities: "حدود المحمية الطبيعية، منصة قوارب كاياك، مسارات بيئية",
+    spotSuggestTitle: "هل تعرف شاطئاً يحتاج إلى تنظيف عاجل؟",
+    spotSuggestText: "ساعدنا في توسيع خريطتنا الساحلية. اقترح شاطئاً متضرراً على جدار المجتمع ليتعاون المتطوعون في تنظيفه.",
+    spotSuggestBtn: "اقترح موقعاً جديداً",
     communityEyebrow: "جدار المجتمع",
-    communityTitle: "مساحة يمكن للناس فيها مشاركة الصور والأفكار واقتراح مواقع جديدة للتنظيف.",
+    communityTitle: "منصة تفاعلية لمشاركة التقارير الميدانية واقتراح الحملات وتبادل الأفكار.",
     formTitle: "انشر رسالة",
-    formIntro: "يتم الآن تحميل المشاركات من واجهة backend ويمكن أن تصبح مشتركة بين جميع المستخدمين بعد نشر الموقع.",
+    formIntro: "أرسل تقريراً عن تنظيف، أو اقترح شاطئاً بحاجة لعناية، أو شارك تجربتك البيئية مع المتطوعين في الإمارات.",
     authorLabel: "اسمك",
     authorPlaceholder: "على سبيل المثال Amina",
     typeLabel: "نوع المشاركة",
@@ -287,10 +476,22 @@ const translations = {
     messagePlaceholder: "شارك فكرة أو موقعاً أو مشكلة أو قصة من حملة تنظيف.",
     submitButton: "نشر",
     feedTitle: "منشورات المجتمع",
-    feedIntro: "فيما يلي المنشورات المحمّلة من backend وكل ما يتم إرساله عبر النموذج.",
-    ctaEyebrow: "الخطوة التالية",
-    ctaTitle: "لكي يعمل هذا الموقع بشكل عام على الإنترنت، فالخطوة التالية هي الاستضافة والنطاق وتخزين production.",
-    ctaButton: "تابع تطوير المشروع",
+    feedIntro: "تقارير وتوصيات وتحديثات ميدانية من المتطوعين في جميع أنحاء الإمارات.",
+    ctaEyebrow: "انضم إلى المبادرة",
+    ctaTitle: "هل أنت مستعد لإحداث أثر حقيقي في شواطئ الإمارات؟",
+    ctaText: "كل عبوة بلاستيكية تُزال، وكل شاطئ يُحمى، يقرّبنا خطوة نحو بحار نقية وحياة فطرية مزدهرة.",
+    ctaButton: "شارك معنا اليوم",
+    footerBrandTitle: "Clean Shores UAE",
+    footerBrandSubtitle: "للشواطئ والمجتمع والعمل",
+    footerDesc: "مبادرة بيئية مجتمعية مستقلة تهدف للحفاظ على نظافة السواحل وحماية التنوع الحيوي البحري وتعزيز المشاركة العامة في دولة الإمارات.",
+    footerNavTitle: "روابط سريعة",
+    footerNavMission: "المهمة",
+    footerNavMedia: "معرض الوسائط",
+    footerNavSpots: "مواقع التنظيف",
+    footerNavCommunity: "جدار المجتمع",
+    footerEmiratesTitle: "الإمارات المشمولة",
+    footerCopyright: "© 2026 Clean Shores UAE. مكرس لحماية الشواطئ والحياة البحرية.",
+    footerTagline: "نحمي محيطاتنا، شاطئاً تلو الآخر.",
     postMediaText: "افتح الصورة / الفيديو",
     defaultAuthor: "عضو في المجتمع",
     defaultType: "منشور",
@@ -298,7 +499,7 @@ const translations = {
     loadingFeed: "جارٍ تحميل منشورات المجتمع...",
     invalidForm: "أضف اسمك ورسالتك قبل النشر.",
     formSuccess: "تم نشر المشاركة بنجاح.",
-    formError: "تعذر على الخادم حفظ المشاركة. تأكد من تشغيل backend.",
+    formError: "تعذر حفظ المشاركة حالياً. يرجى التحقق من الاتصال والمحاولة مجدداً.",
     formLoading: "جارٍ النشر..."
   }
 };
@@ -410,18 +611,46 @@ function applyLanguage(lang) {
     "stat1Label", "stat1Title", "stat1Text", "stat2Label", "stat2Title", "stat2Text",
     "stat3Label", "stat3Title", "stat3Text", "mediaEyebrow", "mediaTitle",
     "mediaFeatureTitle", "mediaFeatureText", "mediaListTitle", "mediaList1", "mediaList2",
-    "mediaList3", "mediaList4", "uploadTitle", "uploadText", "uploadPhotoLabel",
-    "uploadVideoLabel", "spotsEyebrow", "spotsTitle", "spot1Text", "spot2Text",
-    "spot3Text", "spot4Text", "communityEyebrow", "communityTitle", "formTitle",
-    "formIntro", "authorLabel", "typeLabel", "typeThought", "typeCleanup", "typePhoto",
+    "mediaList3", "mediaList4", "uploadTitle", "uploadText", "uploadCta",
+    "spotsEyebrow", "spotsTitle", "spotStatSpots", "spotStatEmirates",
+    "spotStatVolunteer", "filterAll", "filterDubai", "filterAbuDhabi", "filterSharjah",
+    "filterAjman", "filterNorthern", "spotsEmptyState",
+    "spot1Badge", "spot1Title", "spot1Text", "spot1Debris", "spot1Amenities",
+    "spot2Badge", "spot2Title", "spot2Text", "spot2Debris", "spot2Amenities",
+    "spot3Badge", "spot3Title", "spot3Text", "spot3Debris", "spot3Amenities",
+    "spot4Badge", "spot4Title", "spot4Text", "spot4Debris", "spot4Amenities",
+    "spot5Badge", "spot5Title", "spot5Text", "spot5Debris", "spot5Amenities",
+    "spot6Badge", "spot6Title", "spot6Text", "spot6Debris", "spot6Amenities",
+    "spot7Badge", "spot7Title", "spot7Text", "spot7Debris", "spot7Amenities",
+    "spot8Badge", "spot8Title", "spot8Text", "spot8Debris", "spot8Amenities",
+    "spotSuggestTitle", "spotSuggestText", "spotSuggestBtn",
+    "communityEyebrow", "communityTitle", "formTitle", "formIntro",
+    "authorLabel", "typeLabel", "typeThought", "typeCleanup", "typePhoto",
     "typeDiscussion", "locationLabel", "mediaLabel", "mediaFileLabel", "messageLabel",
-    "submitButton", "feedTitle", "feedIntro", "ctaEyebrow", "ctaTitle", "ctaButton"
+    "submitButton", "feedTitle", "feedIntro", "ctaEyebrow", "ctaTitle", "ctaText", "ctaButton",
+    "footerBrandTitle", "footerBrandSubtitle", "footerDesc", "footerNavTitle",
+    "footerNavMission", "footerNavMedia", "footerNavSpots", "footerNavCommunity",
+    "footerEmiratesTitle", "footerCopyright", "footerTagline"
   ].forEach((key) => setText(key, t[key]));
 
   setPlaceholder("authorInput", t.authorPlaceholder);
   setPlaceholder("locationInput", t.locationPlaceholder);
   setPlaceholder("mediaInput", t.mediaPlaceholder);
   setPlaceholder("messageInput", t.messagePlaceholder);
+  setPlaceholder("spotsSearchInput", t.spotsSearchPlaceholder);
+
+  document.querySelectorAll(".spot-directions-text").forEach((el) => {
+    el.textContent = t.spotDirections;
+  });
+  document.querySelectorAll(".spot-nominate-text").forEach((el) => {
+    el.textContent = t.spotNominate;
+  });
+  document.querySelectorAll(".spot-debris-label").forEach((el) => {
+    el.textContent = t.spotDebrisLabel;
+  });
+  document.querySelectorAll(".spot-amenities-label").forEach((el) => {
+    el.textContent = t.spotAmenitiesLabel;
+  });
 
   document.getElementById("heroVideo").setAttribute("aria-label", t.heroImageAlt);
   document.getElementById("mediaImage").alt = t.mediaImageAlt;
@@ -491,7 +720,7 @@ const fallbackSeedPosts = {
       type: "Photo report",
       location: "Al Heera Beach, Sharjah",
       message: "After a local cleanup, the shoreline looked much better. More waste collection points would make the result last longer.",
-      media: "https://example.com",
+      media: "assets/20260301_110910.jpg",
       createdAt: "2026-04-04T11:00:00.000Z"
     }
   ],
@@ -520,7 +749,7 @@ const fallbackSeedPosts = {
       type: "Фотоотчёт",
       location: "Al Heera Beach, Sharjah",
       message: "После локальной уборки берег стал заметно чище. Если добавить больше точек сбора отходов, эффект сохранится дольше.",
-      media: "https://example.com",
+      media: "assets/20260301_110910.jpg",
       createdAt: "2026-04-04T11:00:00.000Z"
     }
   ],
@@ -549,7 +778,7 @@ const fallbackSeedPosts = {
       type: "تقرير صور",
       location: "Al Heera Beach, Sharjah",
       message: "بعد حملة تنظيف محلية أصبح الشاطئ أفضل بكثير. إضافة نقاط جمع نفايات أكثر ستساعد في استمرار النتيجة.",
-      media: "https://example.com",
+      media: "assets/20260301_110910.jpg",
       createdAt: "2026-04-04T11:00:00.000Z"
     }
   ]
@@ -738,13 +967,79 @@ form.addEventListener("submit", async (event) => {
   }
 });
 
+// Cleanup Spots Filtering and Search
+const spotFilterChips = document.querySelectorAll(".spot-chip");
+const spotsSearchInput = document.getElementById("spotsSearchInput");
+const spotsEmptyState = document.getElementById("spotsEmptyState");
+const spotCards = document.querySelectorAll(".spot-card");
+
+function updateSpotsFilter() {
+  const activeChip = document.querySelector(".spot-chip.is-active");
+  const filterVal = activeChip?.dataset.filter || "all";
+  const query = (spotsSearchInput?.value || "").toLowerCase().trim();
+  let visibleCount = 0;
+
+  spotCards.forEach((card) => {
+    const cardEmirate = card.dataset.emirate || "";
+    const cardSearchData = (card.dataset.search || card.textContent).toLowerCase();
+
+    const matchesFilter = filterVal === "all" || cardEmirate.split(" ").includes(filterVal);
+    const matchesSearch = !query || cardSearchData.includes(query);
+
+    if (matchesFilter && matchesSearch) {
+      card.style.display = "";
+      visibleCount++;
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  if (spotsEmptyState) {
+    spotsEmptyState.style.display = visibleCount === 0 ? "block" : "none";
+  }
+}
+
+spotFilterChips.forEach((chip) => {
+  chip.addEventListener("click", () => {
+    spotFilterChips.forEach((c) => c.classList.remove("is-active"));
+    chip.classList.add("is-active");
+    updateSpotsFilter();
+  });
+});
+
+spotsSearchInput?.addEventListener("input", updateSpotsFilter);
+
+// Spot Nomination Action: smooth-scrolls and prefills the community form
+document.querySelectorAll(".nominate-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const spotName = btn.dataset.spot || "";
+    const locInput = document.getElementById("locationInput");
+    const typeInput = document.getElementById("typeInput");
+
+    if (locInput) {
+      locInput.value = spotName;
+    }
+    if (typeInput) {
+      typeInput.value = "cleanup";
+    }
+
+    const formSection = document.getElementById("community");
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: "smooth" });
+      locInput?.focus();
+    }
+  });
+});
+
 langButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const lang = button.dataset.lang;
     window.localStorage.setItem(languageKey, lang);
     setStatus("");
     applyLanguage(lang);
+    updateSpotsFilter();
   });
 });
 
 applyLanguage(getCurrentLanguage());
+updateSpotsFilter();
