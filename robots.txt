@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.cleanshoresuae.org/sitemap.xml
-Sitemap: https://ski-pare-ks.github.io/clean-shores-uae/sitemap.xml
