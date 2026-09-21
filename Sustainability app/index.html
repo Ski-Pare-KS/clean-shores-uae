@@ -27,17 +27,20 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/icon-512.png">
 
+  <!-- Search Result & Social Thumbnail Optimization -->
+  <meta name="thumbnail" content="https://www.cleanshoresuae.org/assets/og-image.jpg">
+
   <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Clean Shores UAE">
   <meta property="og:url" content="https://www.cleanshoresuae.org/">
   <meta property="og:title" content="Clean Shores UAE | Protect Beaches Together">
   <meta property="og:description" content="Public platform for cleaner beaches in the UAE with coastal campaigns, community posts, cleanup spot directory, and open volunteer participation.">
-  <meta property="og:image" content="https://www.cleanshoresuae.org/assets/poster.jpg">
-  <meta property="og:image:secure_url" content="https://www.cleanshoresuae.org/assets/poster.jpg">
+  <meta property="og:image" content="https://www.cleanshoresuae.org/assets/og-image.jpg">
+  <meta property="og:image:secure_url" content="https://www.cleanshoresuae.org/assets/og-image.jpg">
   <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="764">
-  <meta property="og:image:height" content="1024">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Clean Shores UAE - Protect Beaches Together">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="ar_AE">
@@ -48,9 +51,9 @@
   <meta name="twitter:url" content="https://www.cleanshoresuae.org/">
   <meta name="twitter:title" content="Clean Shores UAE | Protect Beaches Together">
   <meta name="twitter:description" content="Public platform for cleaner beaches in the UAE with coastal campaigns, community posts, cleanup spot directory, and open volunteer participation.">
-  <meta name="twitter:image" content="https://www.cleanshoresuae.org/assets/poster.jpg">
+  <meta name="twitter:image" content="https://www.cleanshoresuae.org/assets/og-image.jpg">
 
-  <!-- Google Schema.org Structured Data: WebSite (Displays accurate Site Name in Search Results) -->
+  <!-- Google Schema.org Structured Data: WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,7 +65,14 @@
       "Clean Shores UAE Initiative"
     ],
     "url": "https://www.cleanshoresuae.org/",
-    "inLanguage": ["en", "ar", "ru"]
+    "inLanguage": ["en", "ar", "ru"],
+    "image": "https://www.cleanshoresuae.org/assets/og-image.jpg",
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": "https://www.cleanshoresuae.org/assets/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    }
   }
   </script>
 
@@ -74,7 +84,58 @@
     "name": "Clean Shores UAE",
     "url": "https://www.cleanshoresuae.org/",
     "logo": "https://www.cleanshoresuae.org/assets/icon-512.png",
+    "image": "https://www.cleanshoresuae.org/assets/og-image.jpg",
     "description": "Public initiative and platform for cleaner beaches and coastal conservation across the United Arab Emirates."
+  }
+  </script>
+
+  <!-- Google Schema.org Structured Data: FAQPage (Generative Engine Optimization for AI Search / AI Overviews) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How can volunteers join beach cleanups across Dubai, Abu Dhabi, and the UAE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Volunteers can participate freely through Clean Shores UAE without any registration fees. Explore our Coastal Directory to locate active spots across Dubai, Abu Dhabi, Sharjah, and Ajman, or check the Community Wall for scheduled community sweeps. You can also organize your own sweep, document your impact, and share your cleanup reports on our Community Wall."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which UAE beaches and coastal spots require the most urgent cleanup action?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Priority areas include high-footfall public beaches such as Jumeirah Open Beach and Kite Beach in Dubai, and Al Heera Beach in Sharjah, where single-use plastics and tourist litter frequently wash up. Crucially, sensitive ecological habitats such as the Saadiyat Marine & Coastal Reserve in Abu Dhabi (a vital Hawksbill turtle nesting habitat) and the Al Zorah Mangrove Coast in Ajman require gentle, non-intrusive microplastic sweeps and retrieval of entangled fishing ropes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of marine debris are most commonly found on UAE shorelines?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Audits from UAE coastal sweeps consistently identify single-use plastics (water bottles, bottle caps, straws, and snack wrappers), polystyrene/styrofoam foam flotsam, and discarded fishing lines or nets (ghost gear). Removing these materials prevents degradation into hazardous microplastics that threaten Arabian Gulf marine fauna and coral ecosystems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Clean Shores UAE coordinate with local environmental frameworks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Clean Shores UAE is an independent grassroots platform that aligns with municipal environmental goals and UAE national sustainability agendas. Our cleanup activities support the guidelines and conservation initiatives promoted by Dubai Municipality, Tadweer Group (Abu Dhabi Waste Management), the Environment Agency – Abu Dhabi (EAD), and the Ministry of Climate Change and Environment (MOCCAE), reinforcing national single-use plastic reduction policies."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can UAE residents report or nominate a polluted shoreline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Residents and visitors can nominate any neglected shoreline or mangrove inlet using our Community Wall form. Select 'Cleanup recommendation', specify the beach and Emirate, describe the debris type, and attach photos or videos. Verified submissions are mapped and prioritized for community volunteer mobilization."
+        }
+      }
+    ]
   }
   </script>
 
@@ -99,6 +160,7 @@
           <a href="#media" id="navMedia">Media</a>
           <a href="#cleanup-spots" id="navSpots">Spots</a>
           <a href="#community" id="navCommunity">Community</a>
+          <a href="#faq" id="navFaq">FAQ Guide</a>
         </nav>
         <div class="language-switcher" aria-label="Language switcher">
           <button class="lang-button is-active" type="button" data-lang="en">EN</button>
@@ -561,6 +623,66 @@
         </div>
       </section>
 
+      <section class="faq section" id="faq">
+        <div class="section-heading reveal">
+          <p class="eyebrow" id="faqEyebrow">Coastal Conservation & FAQ</p>
+          <h2 id="faqTitle">Frequently Asked Questions About UAE Beach Cleanups</h2>
+          <p class="section-intro" id="faqIntro">Essential guidance on volunteer participation, priority shoreline areas, marine debris management, and local environmental partnerships across the Emirates.</p>
+        </div>
+
+        <div class="faq-grid">
+          <details class="faq-item glass-card reveal" open>
+            <summary class="faq-question">
+              <h3 id="faqQ1">How can volunteers join beach cleanups across Dubai, Abu Dhabi, and the UAE?</h3>
+              <span class="faq-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p id="faqA1">Volunteers can participate freely through Clean Shores UAE without any registration fees. Explore our Coastal Directory to locate active spots across Dubai, Abu Dhabi, Sharjah, and Ajman, or check the Community Wall for scheduled community sweeps. You can also organize your own sweep with friends, family, or colleagues, document your impact, and share your cleanup reports on our Community Wall.</p>
+            </div>
+          </details>
+
+          <details class="faq-item glass-card reveal">
+            <summary class="faq-question">
+              <h3 id="faqQ2">Which UAE beaches and coastal spots require the most urgent cleanup action?</h3>
+              <span class="faq-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p id="faqA2">Priority areas include high-footfall public beaches such as Jumeirah Open Beach and Kite Beach in Dubai, and Al Heera Beach in Sharjah, where single-use plastics and tourist litter frequently wash up. Crucially, sensitive ecological habitats such as the Saadiyat Marine & Coastal Reserve in Abu Dhabi (a vital Hawksbill turtle nesting habitat) and the Al Zorah Mangrove Coast in Ajman require gentle, non-intrusive microplastic sweeps and retrieval of entangled fishing ropes.</p>
+            </div>
+          </details>
+
+          <details class="faq-item glass-card reveal">
+            <summary class="faq-question">
+              <h3 id="faqQ3">What types of marine debris are most commonly found on UAE shorelines?</h3>
+              <span class="faq-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p id="faqA3">Audits from UAE coastal sweeps consistently identify single-use plastics (water bottles, bottle caps, straws, and snack wrappers), polystyrene/styrofoam foam flotsam, and discarded fishing lines or nets (ghost gear). Removing these materials prevents degradation into hazardous microplastics that threaten Arabian Gulf marine fauna and coral ecosystems.</p>
+            </div>
+          </details>
+
+          <details class="faq-item glass-card reveal">
+            <summary class="faq-question">
+              <h3 id="faqQ4">How does Clean Shores UAE coordinate with local environmental frameworks?</h3>
+              <span class="faq-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p id="faqA4">Clean Shores UAE is an independent grassroots platform that aligns with municipal environmental goals and UAE national sustainability agendas. Our cleanup activities support the guidelines and conservation initiatives promoted by Dubai Municipality, Tadweer Group (Abu Dhabi Waste Management), the Environment Agency – Abu Dhabi (EAD), and the Ministry of Climate Change and Environment (MOCCAE), reinforcing national single-use plastic reduction policies.</p>
+            </div>
+          </details>
+
+          <details class="faq-item glass-card reveal">
+            <summary class="faq-question">
+              <h3 id="faqQ5">How can UAE residents report or nominate a polluted shoreline?</h3>
+              <span class="faq-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p id="faqA5">Residents and visitors can nominate any neglected shoreline or mangrove inlet using our Community Wall form. Select 'Cleanup recommendation', specify the beach and Emirate, describe the debris type, and attach photos or videos. Verified submissions are mapped and prioritized for community volunteer mobilization.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
       <section class="cta section">
         <div class="cta-card reveal">
           <div class="cta-copy">
@@ -593,6 +715,7 @@
             <a href="#media" id="footerNavMedia">Media Gallery</a>
             <a href="#cleanup-spots" id="footerNavSpots">Cleanup Spots</a>
             <a href="#community" id="footerNavCommunity">Community Wall</a>
+            <a href="#faq" id="footerNavFaq">FAQ Guide</a>
           </nav>
         </div>
         <div class="footer-nav-group">
