@@ -11,11 +11,13 @@ const carouselNext = document.querySelector("#carouselNext");
 let carouselIndex = 0;
 
 if (carouselDotsContainer) {
+  carouselDotsContainer.innerHTML = "";
   carouselSlides.forEach((_, index) => {
     const dot = document.createElement("button");
-    dot.className = "carousel-dot";
+    dot.className = index === 0 ? "carousel-dot is-active" : "carousel-dot";
     dot.type = "button";
-    dot.setAttribute("aria-label", `Show photo ${index + 1}`);
+    dot.setAttribute("aria-label", `Show slide ${index + 1}`);
+    if (index === 0) dot.setAttribute("aria-current", "true");
     dot.addEventListener("click", () => showCarouselSlide(index));
     carouselDotsContainer.append(dot);
   });
@@ -41,8 +43,42 @@ function showCarouselSlide(index) {
   });
 }
 
+// Initial display synchronization
+showCarouselSlide(0);
+
 carouselPrevious?.addEventListener("click", () => showCarouselSlide(carouselIndex - 1));
 carouselNext?.addEventListener("click", () => showCarouselSlide(carouselIndex + 1));
+
+// Video interaction and mutual pause handling
+carouselSlides.forEach((slide) => {
+  if (slide instanceof HTMLVideoElement) {
+    slide.addEventListener("click", (e) => {
+      if (e.target === slide) {
+        if (slide.paused) {
+          slide.play().catch(() => {});
+        } else {
+          slide.pause();
+        }
+      }
+    });
+    slide.addEventListener("play", () => {
+      const heroVid = document.querySelector("#heroVideo");
+      if (heroVid && !heroVid.paused) {
+        heroVid.pause();
+      }
+    });
+  }
+});
+
+const heroVideoElement = document.querySelector("#heroVideo");
+heroVideoElement?.addEventListener("play", () => {
+  carouselSlides.forEach((slide) => {
+    if (slide instanceof HTMLVideoElement && !slide.paused) {
+      slide.pause();
+    }
+  });
+});
+
 if (carouselSlides.length > 1) {
   window.setInterval(() => {
     if (!(carouselSlides[carouselIndex] instanceof HTMLVideoElement)) {
@@ -84,7 +120,7 @@ const translations = {
     stat3Text: "People can share thoughts, ideas, experiences and discuss local environmental initiatives.",
     mediaEyebrow: "Conservation in Action",
     mediaTitle: "Documenting our coastal conservation efforts across the Emirates.",
-    mediaImageAlt: "Green natural coastal area",
+    mediaImageAlt: "Saadiyat Beach Abu Dhabi coastal dunes and turquoise waters",
     mediaFeatureTitle: "Active Shoreline Restoration",
     mediaFeatureText: "Our volunteer teams regularly survey, clean, and protect UAE shorelines, safeguarding sensitive marine ecosystems for future generations.",
     mediaListTitle: "Our Key Programs",
@@ -249,7 +285,7 @@ const translations = {
     stat3Text: "Люди могут делиться мыслями, идеями, опытом и обсуждать локальные экологические инициативы.",
     mediaEyebrow: "Инициатива в действии",
     mediaTitle: "Хроника наших экологических акций на побережье ОАЭ.",
-    mediaImageAlt: "Зелёная прибрежная зона",
+    mediaImageAlt: "Прибрежные дюны и бирюзовые воды пляжа Саадият в Абу-Даби",
     mediaFeatureTitle: "Реальное восстановление берегов",
     mediaFeatureText: "Команды волонтёров регулярно обследуют, очищают и защищают пляжи ОАЭ, сохраняя уникальные морские экосистемы для будущих поколений.",
     mediaListTitle: "Ключевые направления",
@@ -414,7 +450,7 @@ const translations = {
     stat3Text: "يمكن للناس مشاركة الأفكار والتجارب ومناقشة المبادرات البيئية المحلية.",
     mediaEyebrow: "المبادرة في الميدان",
     mediaTitle: "توثيق جهودنا لحماية السواحل في مختلف أنحاء الإمارات.",
-    mediaImageAlt: "منطقة ساحلية طبيعية خضراء",
+    mediaImageAlt: "الكثبان الساحلية والمياه الفيروزية لشاطئ السعديات في أبوظبي",
     mediaFeatureTitle: "إعادة تأهيل الشواطئ",
     mediaFeatureText: "تعمل فرق المتطوعين بانتظام على فحص الشواطئ وتنظيفها وحمايتها في دولة الإمارات للحفاظ على النظم البيئية البحرية للأجيال القادمة.",
     mediaListTitle: "برامجنا الأساسية",

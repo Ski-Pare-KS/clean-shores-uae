@@ -271,17 +271,25 @@ h3 {
 }
 
 .hero-video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 0.9;
   overflow: hidden;
   border-radius: 26px;
   background: #091612;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .hero-video {
   display: block;
   width: 100%;
-  aspect-ratio: 0.9;
+  height: 100%;
   object-fit: cover;
-  opacity: 0.92;
+  opacity: 1;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .hero-card {
@@ -411,7 +419,8 @@ h3 {
   display: grid;
   grid-template-areas: "slide";
   overflow: hidden;
-  background: #dce7dd;
+  background: #091612;
+  border-radius: 20px 20px 0 0;
 }
 
 .media-feature .carousel-slide {
@@ -419,12 +428,24 @@ h3 {
   width: 100%;
   height: 420px;
   min-height: 0;
+  object-fit: cover;
   opacity: 0;
-  transition: opacity 420ms ease;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 420ms ease, visibility 420ms ease;
 }
 
 .media-feature .carousel-slide.is-active {
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.media-feature video.carousel-slide {
+  background: #091612;
+  object-fit: contain;
 }
 
 .carousel-controls {
