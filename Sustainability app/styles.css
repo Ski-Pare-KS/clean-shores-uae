@@ -421,6 +421,9 @@ h3 {
   overflow: hidden;
   background: #091612;
   border-radius: 20px 20px 0 0;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .media-feature .carousel-slide {
@@ -433,7 +436,7 @@ h3 {
   visibility: hidden;
   pointer-events: none;
   z-index: 1;
-  transition: opacity 420ms ease, visibility 420ms ease;
+  transition: opacity 420ms ease;
 }
 
 .media-feature .carousel-slide.is-active {
@@ -446,6 +449,9 @@ h3 {
 .media-feature video.carousel-slide {
   background: #091612;
   object-fit: contain;
+  opacity: 1;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .carousel-controls {

@@ -52,14 +52,9 @@ carouselNext?.addEventListener("click", () => showCarouselSlide(carouselIndex + 
 // Video interaction and mutual pause handling
 carouselSlides.forEach((slide) => {
   if (slide instanceof HTMLVideoElement) {
-    slide.addEventListener("click", (e) => {
-      if (e.target === slide) {
-        if (slide.paused) {
-          slide.play().catch(() => {});
-        } else {
-          slide.pause();
-        }
-      }
+    slide.addEventListener("ended", () => {
+      slide.currentTime = 0;
+      slide.pause();
     });
     slide.addEventListener("play", () => {
       const heroVid = document.querySelector("#heroVideo");
@@ -71,6 +66,10 @@ carouselSlides.forEach((slide) => {
 });
 
 const heroVideoElement = document.querySelector("#heroVideo");
+heroVideoElement?.addEventListener("ended", () => {
+  heroVideoElement.currentTime = 0;
+  heroVideoElement.pause();
+});
 heroVideoElement?.addEventListener("play", () => {
   carouselSlides.forEach((slide) => {
     if (slide instanceof HTMLVideoElement && !slide.paused) {
